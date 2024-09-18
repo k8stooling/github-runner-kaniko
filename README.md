@@ -16,17 +16,18 @@ on:
     - main
   workflow_dispatch:
 jobs:
-  builmy-repo:
+  build-my-repo:
     runs-on: self-hosted
     steps:
-      
       - name: 🎉 The job was automatically triggered by a ${{ github.event_name }} event.
         run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      
       - name: 🐧 This job is now running on a ${{ runner.os }} runner hosted in by you!
         run: echo "🐧 This job is now running on a ${{ runner.os }} runner hosted by you!"
+      
       - name: 🔎 We are on ${{ github.repository }} / ${{ github.ref }} / ${{ github.sha }}.
         run: echo "🔎 We are on ${{ github.repository }} / ${{ github.ref }} / ${{ github.sha }}."
-      
+
       - name: 🌀 Check out repository code
         uses: actions/checkout@v3
       
@@ -53,4 +54,3 @@ AWS_WEB_IDENTITY_TOKEN_FILE # /var/run/secrets/eks.amazonaws.com/serviceaccount/
 
 - Implement the same as Github action.
  
-
