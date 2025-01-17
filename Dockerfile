@@ -21,7 +21,7 @@ RUN cd /tmp; curl -O -L https://github.com/actions/runner/releases/download/v2.3
 COPY sudoers /etc/sudoers.d/sudoers
 COPY registries.conf /etc/containers/registries.conf
 COPY kaniko-build /usr/bin
-
+RUN chmod +x /usr/bin/kaniko-build
 RUN mkdir /app
 WORKDIR /app
 RUN tar xzf /tmp/actions-runner-linux-x64-2.317.0.tar.gz

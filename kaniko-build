@@ -53,7 +53,9 @@ export AWS_REGION=$AWS_REGION
 export AWS_ROLE_ARN=$AWS_ROLE_ARN
 export AWS_STS_REGIONAL_ENDPOINTS=regional
 export AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE
+export DOCKER_CONFIG=/kaniko/.docker/
+export KANIKO_EXTRA_ARGS=$KANIKO_EXTRA_ARGS
 END
 
-sudo chroot . bash -c ". /.env; set; ./kaniko/executor -f /kaniko/workspace/Dockerfile --context=/kaniko/workspace/ --force --destination=$destination --cleanup"
+sudo chroot . bash -c ". /.env; set; ./kaniko/executor -f /kaniko/workspace/Dockerfile --context=/kaniko/workspace/ --force --destination=$destination --cleanup $KANIKO_EXTRA_ARGS"
 
