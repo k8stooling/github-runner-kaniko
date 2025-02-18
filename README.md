@@ -1,3 +1,6 @@
+> [!NOTE]  
+> This repository was obsoleted by the [kaniko-standalone](https://github.com/k8stooling/kaniko-standalone) GitHub action.
+
 # github-runner-kaniko
 Github runner adopted to k8s environments without docker
 
@@ -50,7 +53,3 @@ AWS_ROLE_ARN # arn:aws:iam::12345678:role/ecr-builder
 AWS_WEB_IDENTITY_TOKEN_FILE # /var/run/secrets/eks.amazonaws.com/serviceaccount/token
 ```
 
-# TODO 
-
-- Implement the same as Github action.
- 
